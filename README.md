@@ -21,6 +21,11 @@ DOM Manipulation
 Measuring Performance Redux
 
 ## Resources
+### JSON
+Get a users Delicious Links http://feeds.delicious.com/v2/json/gary.ray/programming?count=150
+
+[Online JSON Generator](http://beta.json-generator.com/) 
+
 ### Books
 
 [Eloquent JavaScript](http://eloquentjavascript.net/) - free HTML version online
