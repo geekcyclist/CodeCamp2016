@@ -1,8 +1,7 @@
 var employeeList = [];
 
-console.time("fill list");
 fillEmployeeList();
-console.timeEnd("fill list");
+
 console.log(employeeList.length);
 
 function fillEmployeeList(){

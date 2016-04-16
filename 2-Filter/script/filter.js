@@ -17,7 +17,7 @@ function fillEmployeeList(){
         divisionName = divisionList[i].divisionName;
         for(var j = 0; j < divisionEmployees.length; j++) {
             currentEmployee = divisionEmployees[j];
-            if(currentEmployee.isActive){ // don't use isActive === true!!
+            if(currentEmployee.isActive == true){ // don't use isActive == true!!
                 var emp = new Employee(
                    currentEmployee.name.first,
                     currentEmployee.name.last,    
