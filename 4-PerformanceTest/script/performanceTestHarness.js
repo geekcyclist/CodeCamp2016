@@ -17,9 +17,11 @@ PerformanceTest.prototype = {
     }
     var beginTime, endTime, sumTimes = 0;
     for (var i = 0, x = this.repetitions; i < x; i++) {
-      beginTime = +new Date(); //+ operator formats the date as milliseconds;
+      // beginTime = +new Date(); // for older browsers... + operator formats the date as milliseconds;
+      beginTime = performance.now();
       this.codeToTest(this.testParams);
-      endTime = +new Date();
+      //endTime = +new Date(); // for older browsers
+      endTime = performance.now();
       sumTimes += endTime - beginTime;
     }
     this.average = sumTimes / this.repetitions;
