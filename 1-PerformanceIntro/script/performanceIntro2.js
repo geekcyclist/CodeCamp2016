@@ -1,8 +1,12 @@
 var employeeList = [];
-
-console.time("fill list");
+// console.time - quick and dirty with auto logging. Can nest timers
+// performance.now() - far more accurate but have to add logging.
+//console.time("fill list");
+var beginTime = performance.now();
 fillEmployeeList();
-console.timeEnd("fill list");
+var endTime = performance.now();
+//console.timeEnd("fill list");
+console.log("Time to fill list: " + (endTime - beginTime));
 console.log(employeeList.length);
 
 //Cache Loop Invariant Data

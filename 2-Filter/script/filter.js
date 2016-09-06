@@ -1,8 +1,9 @@
 var employeeList = [];
 
-console.time("fill list");
+var beginTime = performance.now();
 fillEmployeeList();
-console.timeEnd("fill list");
+var endTime = performance.now();
+console.log("Time to fill list: " + (endTime - beginTime));
 console.log(employeeList.length);
 
 //filter for active = true
@@ -17,7 +18,7 @@ function fillEmployeeList(){
         divisionName = divisionList[i].divisionName;
         for(var j = 0; j < divisionEmployees.length; j++) {
             currentEmployee = divisionEmployees[j];
-            if(currentEmployee.isActive == true){ // don't use isActive == true!!
+           // if(currentEmployee.isActive == true){ // don't use isActive == true!!
                 var emp = new Employee(
                    currentEmployee.name.first,
                     currentEmployee.name.last,    
@@ -25,7 +26,7 @@ function fillEmployeeList(){
                     divisionName               
                 )
                 employeeList.push(emp);
-            }
+            //}
         }                                                           
     }
 }
